@@ -1,6 +1,8 @@
-def main():
-    print("Hello from electrabattery!")
+from fastapi import FastAPI
 
+app = FastAPI()
 
-if __name__ == "__main__":
-    main()
+@app.get("/voltage") #what file thing its stored in ex: google.com/voltage
+def get_voltage():
+    print(3)
+    return {"volts": 3, "amps": 100}
